@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  http_basic_authenticate_with name: "Ankit", password: "123"
+
   def index
     @articles = Article.all
   end
@@ -44,6 +47,6 @@ class ArticlesController < ApplicationController
   end 
   private 
   def article_params 
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :status)
   end
 end
