@@ -1,4 +1,7 @@
+
+
 <%= form_with model: article do |form| %>
+ 
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -6,6 +9,7 @@
       <div><%= message %></div>
     <% end %>
   </div>
+
 
   <div>
     <%= form.label :body %><br>
@@ -24,3 +28,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+
