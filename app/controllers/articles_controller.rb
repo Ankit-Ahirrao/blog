@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
   http_basic_authenticate_with name: "Ankit", password: "123"
 
-  def index
+  def index 
     @articles = Article.all
   end
   
